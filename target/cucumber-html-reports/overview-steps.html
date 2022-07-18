@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>AutomationExercise</td>
+        <td>1</td>
+      <td>18 Jul 2022, 12:13</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepdefinitions.AccountCreatedStepDefinitions.clickContinueButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="2893661200">2.893</td>
+              <td class="duration" data-value="2893661200">2.893</td>
+              <td class="duration" data-value="2893661200">2.893</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.AccountCreatedStepDefinitions.verifyACCOUNTCREATEDAndClickContinueButton()</td>
+              <td>3</td>
+              <td class="duration" data-value="2811275300">2.811</td>
+              <td class="duration" data-value="2811275300">2.990</td>
+              <td class="duration" data-value="8433825900">8.433</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.AccountCreatedStepDefinitions.verifyThatACCOUNTCREATEDIsVisible()</td>
+              <td>1</td>
+              <td class="duration" data-value="15625100">0.015</td>
+              <td class="duration" data-value="15625100">0.015</td>
+              <td class="duration" data-value="15625100">0.015</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.clickContinueButtonn()</td>
+              <td>1</td>
+              <td class="duration" data-value="2844804700">2.844</td>
+              <td class="duration" data-value="2844804700">2.844</td>
+              <td class="duration" data-value="2844804700">2.844</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.clickDownloadInvoiceButtonAndVerifyInvoiceIsDownloadedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="2699320000">2.699</td>
+              <td class="duration" data-value="2699320000">2.699</td>
+              <td class="duration" data-value="2699320000">2.699</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.clickProceedToCheckout()</td>
+              <td>5</td>
+              <td class="duration" data-value="933233960">0.933</td>
+              <td class="duration" data-value="933233960">1.548</td>
+              <td class="duration" data-value="4666169800">4.666</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.clickProceedToCheckoutButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="981472800">0.981</td>
+              <td class="duration" data-value="981472800">0.988</td>
+              <td class="duration" data-value="1962945600">1.962</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.clickRegisterLoginButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="725605600">0.725</td>
+              <td class="duration" data-value="725605600">0.727</td>
+              <td class="duration" data-value="1451211200">1.451</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.clickXButtonCorrespondingToParticularProduct()</td>
+              <td>1</td>
+              <td class="duration" data-value="2024469600">2.024</td>
+              <td class="duration" data-value="2024469600">2.024</td>
+              <td class="duration" data-value="2024469600">2.024</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.enterDescriptionInCommentTextAreaAndClickPlaceOrder()</td>
+              <td>4</td>
+              <td class="duration" data-value="556167500">0.556</td>
+              <td class="duration" data-value="556167500">0.782</td>
+              <td class="duration" data-value="2224670000">2.224</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.verifyAddressDetailsAndReviewYourOrder()</td>
+              <td>4</td>
+              <td class="duration" data-value="37354350">0.037</td>
+              <td class="duration" data-value="37354350">0.039</td>
+              <td class="duration" data-value="149417400">0.149</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.verifyThatCartPageIsDisplayed()</td>
+              <td>6</td>
+              <td class="duration" data-value="13835083">0.013</td>
+              <td class="duration" data-value="13835083">0.014</td>
+              <td class="duration" data-value="83010500">0.083</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.verifyThatProductIsDisplayedInCartPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="12695500">0.012</td>
+              <td class="duration" data-value="12695500">0.012</td>
+              <td class="duration" data-value="12695500">0.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.verifyThatProductIsDisplayedInCartPageWithExactQuantity()</td>
+              <td>1</td>
+              <td class="duration" data-value="13672200">0.013</td>
+              <td class="duration" data-value="13672200">0.013</td>
+              <td class="duration" data-value="13672200">0.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.verifyThatProductIsRemovedFromTheCart()</td>
+              <td>1</td>
+              <td class="duration" data-value="11719500">0.011</td>
+              <td class="duration" data-value="11719500">0.011</td>
+              <td class="duration" data-value="11719500">0.011</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.verifyThatTheBillingAddressIsSameAddressFilledAtTheTimeRegistrationOfAccount()</td>
+              <td>1</td>
+              <td class="duration" data-value="12696400">0.012</td>
+              <td class="duration" data-value="12696400">0.012</td>
+              <td class="duration" data-value="12696400">0.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.verifyThatTheDeliveryAddressIsSameAddressFilledAtTheTimeRegistrationOfAccount()</td>
+              <td>1</td>
+              <td class="duration" data-value="19531900">0.019</td>
+              <td class="duration" data-value="19531900">0.019</td>
+              <td class="duration" data-value="19531900">0.019</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.verifyThatThoseProductsAreVisibleInCartAfterLoginAsWell()</td>
+              <td>1</td>
+              <td class="duration" data-value="28321000">0.028</td>
+              <td class="duration" data-value="28321000">0.028</td>
+              <td class="duration" data-value="28321000">0.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.verifyTheirPricesQuantityAndTotalPrice()</td>
+              <td>1</td>
+              <td class="duration" data-value="77151100">0.077</td>
+              <td class="duration" data-value="77151100">0.077</td>
+              <td class="duration" data-value="77151100">0.077</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CartStepDefinitions.verify_both_products_are_added_to_cart()</td>
+              <td>1</td>
+              <td class="duration" data-value="28320800">0.028</td>
+              <td class="duration" data-value="28320800">0.028</td>
+              <td class="duration" data-value="28320800">0.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ContactUsStepDefinitions.clickHomeButtonAndVerifyThatLandedToHomePageSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="2793045200">2.793</td>
+              <td class="duration" data-value="2793045200">2.793</td>
+              <td class="duration" data-value="2793045200">2.793</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ContactUsStepDefinitions.clickOKButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="5860500">0.005</td>
+              <td class="duration" data-value="5860500">0.005</td>
+              <td class="duration" data-value="5860500">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ContactUsStepDefinitions.clickSubmitButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="33194800">0.033</td>
+              <td class="duration" data-value="33194800">0.033</td>
+              <td class="duration" data-value="33194800">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ContactUsStepDefinitions.click_on_contact_us_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="499035700">0.499</td>
+              <td class="duration" data-value="499035700">0.499</td>
+              <td class="duration" data-value="499035700">0.499</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ContactUsStepDefinitions.enterNameEmailSubjectAndMessage()</td>
+              <td>1</td>
+              <td class="duration" data-value="154301100">0.154</td>
+              <td class="duration" data-value="154301100">0.154</td>
+              <td class="duration" data-value="154301100">0.154</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ContactUsStepDefinitions.uploadFile()</td>
+              <td>1</td>
+              <td class="duration" data-value="4033323200">4.033</td>
+              <td class="duration" data-value="4033323200">4.033</td>
+              <td class="duration" data-value="4033323200">4.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ContactUsStepDefinitions.verifyGETINTOUCHIsVisible()</td>
+              <td>1</td>
+              <td class="duration" data-value="12695300">0.012</td>
+              <td class="duration" data-value="12695300">0.012</td>
+              <td class="duration" data-value="12695300">0.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ContactUsStepDefinitions.verifySuccessMessageSuccessYourDetailsHaveBeenSubmittedSuccessfullyIsVisible()</td>
+              <td>1</td>
+              <td class="duration" data-value="14649300">0.014</td>
+              <td class="duration" data-value="14649300">0.014</td>
+              <td class="duration" data-value="14649300">0.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CreateFillDetailsStepDefinitions.clickCreateAccountButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="1461954400">1.461</td>
+              <td class="duration" data-value="1461954400">1.461</td>
+              <td class="duration" data-value="1461954400">1.461</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CreateFillDetailsStepDefinitions.fill_details_first_name_last_name_company_address_address2_country_state_city_zipcode_mobile_number()</td>
+              <td>1</td>
+              <td class="duration" data-value="466809900">0.466</td>
+              <td class="duration" data-value="466809900">0.466</td>
+              <td class="duration" data-value="466809900">0.466</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CreateFillDetailsStepDefinitions.fill_details_title_name_email_password_date_of_birth()</td>
+              <td>1</td>
+              <td class="duration" data-value="606461700">0.606</td>
+              <td class="duration" data-value="606461700">0.606</td>
+              <td class="duration" data-value="606461700">0.606</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CreateFillDetailsStepDefinitions.selectCheckboxReceiveSpecialOffersFromOurPartners()</td>
+              <td>1</td>
+              <td class="duration" data-value="34180700">0.034</td>
+              <td class="duration" data-value="34180700">0.034</td>
+              <td class="duration" data-value="34180700">0.034</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.CreateFillDetailsStepDefinitions.selectCheckboxSignUpForOurNewsletter()</td>
+              <td>1</td>
+              <td class="duration" data-value="33204200">0.033</td>
+              <td class="duration" data-value="33204200">0.033</td>
+              <td class="duration" data-value="33204200">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DeleteAccountStepDefinitions.clickDeleteAccountButton()</td>
+              <td>7</td>
+              <td class="duration" data-value="821040071">0.821</td>
+              <td class="duration" data-value="821040071">1.510</td>
+              <td class="duration" data-value="5747280500">5.747</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DeleteAccountStepDefinitions.verifyACCOUNTDELETEDAndClickContinueButton()</td>
+              <td>5</td>
+              <td class="duration" data-value="14062860">0.014</td>
+              <td class="duration" data-value="14062860">0.014</td>
+              <td class="duration" data-value="70314300">0.070</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DeleteAccountStepDefinitions.verifyLoggedInAsUsernameAtTop()</td>
+              <td>5</td>
+              <td class="duration" data-value="13672000">0.013</td>
+              <td class="duration" data-value="13672000">0.014</td>
+              <td class="duration" data-value="68360000">0.068</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DeleteAccountStepDefinitions.verifyThatACCOUNTDELETEDIsVisible()</td>
+              <td>1</td>
+              <td class="duration" data-value="16601000">0.016</td>
+              <td class="duration" data-value="16601000">0.016</td>
+              <td class="duration" data-value="16601000">0.016</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DeleteAccountStepDefinitions.verifyThatACCOUNTDELETEDIsVisibleAndClickContinueButtons()</td>
+              <td>1</td>
+              <td class="duration" data-value="12695400">0.012</td>
+              <td class="duration" data-value="12695400">0.012</td>
+              <td class="duration" data-value="12695400">0.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.DeleteAccountStepDefinitions.verifyThatLoggedInAsUsernameIsVisible()</td>
+              <td>3</td>
+              <td class="duration" data-value="14323100">0.014</td>
+              <td class="duration" data-value="14323100">0.015</td>
+              <td class="duration" data-value="42969300">0.042</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.againGoToCartPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="814503500">0.814</td>
+              <td class="duration" data-value="814503500">0.814</td>
+              <td class="duration" data-value="814503500">0.814</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.clickCartButton()</td>
+              <td>8</td>
+              <td class="duration" data-value="1159581350">1.159</td>
+              <td class="duration" data-value="1159581350">1.542</td>
+              <td class="duration" data-value="9276650800">9.276</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.clickOnAddToCartOnRecommendedProduct()</td>
+              <td>1</td>
+              <td class="duration" data-value="5147602200">5.147</td>
+              <td class="duration" data-value="5147602200">5.147</td>
+              <td class="duration" data-value="5147602200">5.147</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.clickOnAnyBrandName()</td>
+              <td>1</td>
+              <td class="duration" data-value="1589887800">1.589</td>
+              <td class="duration" data-value="1589887800">1.589</td>
+              <td class="duration" data-value="1589887800">1.589</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.clickOnAnyCategoryLinkUnderWomenCategoryForExampleDress()</td>
+              <td>1</td>
+              <td class="duration" data-value="1657272600">1.657</td>
+              <td class="duration" data-value="1657272600">1.657</td>
+              <td class="duration" data-value="1657272600">1.657</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.clickOnArrowAtBottomRightSideToMoveUpward()</td>
+              <td>1</td>
+              <td class="duration" data-value="27344600">0.027</td>
+              <td class="duration" data-value="27344600">0.027</td>
+              <td class="duration" data-value="27344600">0.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.clickOnViewCartButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="2237366700">2.237</td>
+              <td class="duration" data-value="2237366700">2.237</td>
+              <td class="duration" data-value="2237366700">2.237</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.clickOnWomenCategory()</td>
+              <td>1</td>
+              <td class="duration" data-value="32227100">0.032</td>
+              <td class="duration" data-value="32227100">0.032</td>
+              <td class="duration" data-value="32227100">0.032</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.enterEmailAddressInInputAndClickArrowButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="71291900">0.071</td>
+              <td class="duration" data-value="71291900">0.072</td>
+              <td class="duration" data-value="142583800">0.142</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.onLeftSideBarClickOnAnyOtherBrandLink()</td>
+              <td>1</td>
+              <td class="duration" data-value="1116241800">1.116</td>
+              <td class="duration" data-value="1116241800">1.116</td>
+              <td class="duration" data-value="1116241800">1.116</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.onLeftSideBarClickOnAnySubCategoryLinkOfMenCategory()</td>
+              <td>1</td>
+              <td class="duration" data-value="2829179300">2.829</td>
+              <td class="duration" data-value="2829179300">2.829</td>
+              <td class="duration" data-value="2829179300">2.829</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.scrollDownPageToBottom()</td>
+              <td>2</td>
+              <td class="duration" data-value="6347800">0.006</td>
+              <td class="duration" data-value="6347800">0.008</td>
+              <td class="duration" data-value="12695600">0.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.scrollToBottomOfPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="4881900">0.004</td>
+              <td class="duration" data-value="4881900">0.004</td>
+              <td class="duration" data-value="4881900">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.scrollUpPageToTop()</td>
+              <td>1</td>
+              <td class="duration" data-value="3003988500">3.003</td>
+              <td class="duration" data-value="3003988500">3.003</td>
+              <td class="duration" data-value="3003988500">3.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.scroll_down_to_footer()</td>
+              <td>2</td>
+              <td class="duration" data-value="3007406750">3.007</td>
+              <td class="duration" data-value="3007406750">3.010</td>
+              <td class="duration" data-value="6014813500">6.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.verifyRECOMMENDEDITEMSAreVisible()</td>
+              <td>1</td>
+              <td class="duration" data-value="18555700">0.018</td>
+              <td class="duration" data-value="18555700">0.018</td>
+              <td class="duration" data-value="18555700">0.018</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.verifySUBSCRIPTIONIsVisible()</td>
+              <td>2</td>
+              <td class="duration" data-value="17090300">0.017</td>
+              <td class="duration" data-value="17090300">0.019</td>
+              <td class="duration" data-value="34180600">0.034</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.verifySuccessMessageYouHaveBeenSuccessfullySubscribedIsVisible()</td>
+              <td>2</td>
+              <td class="duration" data-value="13672200">0.013</td>
+              <td class="duration" data-value="13672200">0.014</td>
+              <td class="duration" data-value="27344400">0.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.verifyTextSUBSCRIPTION()</td>
+              <td>2</td>
+              <td class="duration" data-value="13672000">0.013</td>
+              <td class="duration" data-value="13672000">0.014</td>
+              <td class="duration" data-value="27344000">0.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.verifyThatBrandsAreVisibleOnLeftSideBar()</td>
+              <td>1</td>
+              <td class="duration" data-value="13672100">0.013</td>
+              <td class="duration" data-value="13672100">0.013</td>
+              <td class="duration" data-value="13672100">0.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.verifyThatCategoriesAreVisibleOnLeftSideBar()</td>
+              <td>1</td>
+              <td class="duration" data-value="14649000">0.014</td>
+              <td class="duration" data-value="14649000">0.014</td>
+              <td class="duration" data-value="14649000">0.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.verifyThatCategoryPageIsDisplayedAndConfirmTextWOMENTOPSPRODUCTS()</td>
+              <td>1</td>
+              <td class="duration" data-value="13671800">0.013</td>
+              <td class="duration" data-value="13671800">0.013</td>
+              <td class="duration" data-value="13671800">0.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.verifyThatPageIsScrolledUpAndFullFledgedPracticeWebsiteForAutomationEngineersTextIsVisibleOnScreen()</td>
+              <td>2</td>
+              <td class="duration" data-value="13672000">0.013</td>
+              <td class="duration" data-value="13672000">0.014</td>
+              <td class="duration" data-value="27344000">0.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.verifyThatUserIsNavigatedToBrandPageAndBrandProductsAreDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="13671400">0.013</td>
+              <td class="duration" data-value="13671400">0.013</td>
+              <td class="duration" data-value="13671400">0.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.verifyThatUserIsNavigatedToThatBrandPageAndCanSeeProducts()</td>
+              <td>1</td>
+              <td class="duration" data-value="11719000">0.011</td>
+              <td class="duration" data-value="11719000">0.011</td>
+              <td class="duration" data-value="11719000">0.011</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.HomePageStepDefinitions.verifyThatUserIsNavigatedToThatCategoryPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="12695700">0.012</td>
+              <td class="duration" data-value="12695700">0.012</td>
+              <td class="duration" data-value="12695700">0.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Hooks.setUp()</td>
+              <td>26</td>
+              <td class="duration" data-value="75153">0.000</td>
+              <td class="duration" data-value="75153">0.000</td>
+              <td class="duration" data-value="1954000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>26</td>
+              <td class="duration" data-value="693002803">0.693</td>
+              <td class="duration" data-value="693002803">0.855</td>
+              <td class="duration" data-value="18018072900">18.018</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.PaymentStepDefinitions.clickPayAndConfirmOrderButton()</td>
+              <td>4</td>
+              <td class="duration" data-value="2751052250">2.751</td>
+              <td class="duration" data-value="2751052250">3.124</td>
+              <td class="duration" data-value="11004209000">11.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.PaymentStepDefinitions.enter_payment_details_name_on_card_card_number_cvc_expiration_date()</td>
+              <td>4</td>
+              <td class="duration" data-value="175541775">0.175</td>
+              <td class="duration" data-value="175541775">0.176</td>
+              <td class="duration" data-value="702167100">0.702</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.PaymentStepDefinitions.verifySuccessMessageYourOrderHasBeenPlacedSuccessfully()</td>
+              <td>4</td>
+              <td class="duration" data-value="15869375">0.015</td>
+              <td class="duration" data-value="15869375">0.021</td>
+              <td class="duration" data-value="63477500">0.063</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.addProductsToCart()</td>
+              <td>6</td>
+              <td class="duration" data-value="6812203100">6.812</td>
+              <td class="duration" data-value="6812203100">6.907</td>
+              <td class="duration" data-value="40873218600">40.873</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.addThoseProductsToCart()</td>
+              <td>1</td>
+              <td class="duration" data-value="2406315900">2.406</td>
+              <td class="duration" data-value="2406315900">2.406</td>
+              <td class="duration" data-value="2406315900">2.406</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.clickAddToCartButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="27344000">0.027</td>
+              <td class="duration" data-value="27344000">0.027</td>
+              <td class="duration" data-value="27344000">0.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.clickCartButtonAndVerifyThatProductsAreVisibleInCart()</td>
+              <td>1</td>
+              <td class="duration" data-value="2028402600">2.028</td>
+              <td class="duration" data-value="2028402600">2.028</td>
+              <td class="duration" data-value="2028402600">2.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.clickContinueShoppingButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="248053700">0.248</td>
+              <td class="duration" data-value="248053700">0.248</td>
+              <td class="duration" data-value="248053700">0.248</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.clickOnViewProductButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="2670999300">2.670</td>
+              <td class="duration" data-value="2670999300">2.670</td>
+              <td class="duration" data-value="2670999300">2.670</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.clickOnViewProductOfFirstProduct()</td>
+              <td>1</td>
+              <td class="duration" data-value="3697367700">3.697</td>
+              <td class="duration" data-value="3697367700">3.697</td>
+              <td class="duration" data-value="3697367700">3.697</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.clickSubmitButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="28320600">0.028</td>
+              <td class="duration" data-value="28320600">0.028</td>
+              <td class="duration" data-value="28320600">0.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.clickViewCartButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="1331090600">1.331</td>
+              <td class="duration" data-value="1331090600">1.792</td>
+              <td class="duration" data-value="2662181200">2.662</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.clickViewProductForAnyProductOnHomePage()</td>
+              <td>1</td>
+              <td class="duration" data-value="5453274100">5.453</td>
+              <td class="duration" data-value="5453274100">5.453</td>
+              <td class="duration" data-value="5453274100">5.453</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.click_on_products_button()</td>
+              <td>6</td>
+              <td class="duration" data-value="2711663033">2.711</td>
+              <td class="duration" data-value="2711663033">4.221</td>
+              <td class="duration" data-value="16269978200">16.269</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.enterNameEmailAndReview()</td>
+              <td>1</td>
+              <td class="duration" data-value="118166900">0.118</td>
+              <td class="duration" data-value="118166900">0.118</td>
+              <td class="duration" data-value="118166900">0.118</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.enterProductNameInSearchInputAndClickSearchButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="3998156500">3.998</td>
+              <td class="duration" data-value="3998156500">4.000</td>
+              <td class="duration" data-value="7996313000">7.996</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.hoverOverFirstProductAndClickAddToCart()</td>
+              <td>1</td>
+              <td class="duration" data-value="2071346100">2.071</td>
+              <td class="duration" data-value="2071346100">2.071</td>
+              <td class="duration" data-value="2071346100">2.071</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.hoverOverSecondProductAndClickAddToCart()</td>
+              <td>1</td>
+              <td class="duration" data-value="27344700">0.027</td>
+              <td class="duration" data-value="27344700">0.027</td>
+              <td class="duration" data-value="27344700">0.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.increaseQuantityTo(int)</td>
+              <td>1</td>
+              <td class="duration" data-value="54689300">0.054</td>
+              <td class="duration" data-value="54689300">0.054</td>
+              <td class="duration" data-value="54689300">0.054</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.theProductsListIsVisible()</td>
+              <td>1</td>
+              <td class="duration" data-value="12695000">0.012</td>
+              <td class="duration" data-value="12695000">0.012</td>
+              <td class="duration" data-value="12695000">0.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.userIsLandedToProductDetailPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="13672100">0.013</td>
+              <td class="duration" data-value="13672100">0.013</td>
+              <td class="duration" data-value="13672100">0.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.verifyAllTheProductsRelatedToSearchAreVisible()</td>
+              <td>2</td>
+              <td class="duration" data-value="36621950">0.036</td>
+              <td class="duration" data-value="36621950">0.037</td>
+              <td class="duration" data-value="73243900">0.073</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.verifyProductDetailIsOpened()</td>
+              <td>1</td>
+              <td class="duration" data-value="13672600">0.013</td>
+              <td class="duration" data-value="13672600">0.013</td>
+              <td class="duration" data-value="13672600">0.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.verifySEARCHEDPRODUCTSIsVisible()</td>
+              <td>2</td>
+              <td class="duration" data-value="12695500">0.012</td>
+              <td class="duration" data-value="12695500">0.012</td>
+              <td class="duration" data-value="25391000">0.025</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.verifySuccessMessageThankYouForYourReview()</td>
+              <td>1</td>
+              <td class="duration" data-value="13672200">0.013</td>
+              <td class="duration" data-value="13672200">0.013</td>
+              <td class="duration" data-value="13672200">0.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.verifyThatDetailDetailIsVisibleProductNameCategoryPriceAvailabilityConditionBrand()</td>
+              <td>1</td>
+              <td class="duration" data-value="78126800">0.078</td>
+              <td class="duration" data-value="78126800">0.078</td>
+              <td class="duration" data-value="78126800">0.078</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.verifyUserIsNavigatedToALLPRODUCTSPageSuccessfully()</td>
+              <td>4</td>
+              <td class="duration" data-value="2197325">0.002</td>
+              <td class="duration" data-value="2197325">0.002</td>
+              <td class="duration" data-value="8789300">0.008</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ProductsStepDefinitions.verifyWriteYourReviewIsVisible()</td>
+              <td>1</td>
+              <td class="duration" data-value="13671600">0.013</td>
+              <td class="duration" data-value="13671600">0.013</td>
+              <td class="duration" data-value="13671600">0.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.clickLoginButton()</td>
+              <td>3</td>
+              <td class="duration" data-value="2564523600">2.564</td>
+              <td class="duration" data-value="2564523600">3.552</td>
+              <td class="duration" data-value="7693570800">7.693</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.clickLogoutButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="499036600">0.499</td>
+              <td class="duration" data-value="499036600">0.499</td>
+              <td class="duration" data-value="499036600">0.499</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.clickOnSignupLoginButton()</td>
+              <td>8</td>
+              <td class="duration" data-value="740132525">0.740</td>
+              <td class="duration" data-value="740132525">0.748</td>
+              <td class="duration" data-value="5921060200">5.921</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.clickSignupButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="754903450">0.754</td>
+              <td class="duration" data-value="754903450">0.767</td>
+              <td class="duration" data-value="1509806900">1.509</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.clickSignupLoginButtonAndSubmitLoginDetails()</td>
+              <td>1</td>
+              <td class="duration" data-value="4513822700">4.513</td>
+              <td class="duration" data-value="4513822700">4.513</td>
+              <td class="duration" data-value="4513822700">4.513</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.enterCorrectEmailAddressAndPassword()</td>
+              <td>2</td>
+              <td class="duration" data-value="81056900">0.081</td>
+              <td class="duration" data-value="81056900">0.083</td>
+              <td class="duration" data-value="162113800">0.162</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.enterIncorrectEmailAddressAndPassword()</td>
+              <td>1</td>
+              <td class="duration" data-value="827171000">0.827</td>
+              <td class="duration" data-value="827171000">0.827</td>
+              <td class="duration" data-value="827171000">0.827</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.enterNameAndAlreadyRegisteredEmailAddress()</td>
+              <td>1</td>
+              <td class="duration" data-value="815452500">0.815</td>
+              <td class="duration" data-value="815452500">0.815</td>
+              <td class="duration" data-value="815452500">0.815</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.enterNameAndEmailAddress()</td>
+              <td>1</td>
+              <td class="duration" data-value="178716700">0.178</td>
+              <td class="duration" data-value="178716700">0.178</td>
+              <td class="duration" data-value="178716700">0.178</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.fillAllDetailsInSignupAndCreateAccount()</td>
+              <td>3</td>
+              <td class="duration" data-value="6235532066">6.235</td>
+              <td class="duration" data-value="6235532066">6.273</td>
+              <td class="duration" data-value="18706596200">18.706</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.fillEmailPasswordAndClickLoginButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="4539201550">4.539</td>
+              <td class="duration" data-value="4539201550">5.419</td>
+              <td class="duration" data-value="9078403100">9.078</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.launchBrowser()</td>
+              <td>26</td>
+              <td class="duration" data-value="1142423930">1.142</td>
+              <td class="duration" data-value="1142423930">1.610</td>
+              <td class="duration" data-value="29703022200">29.703</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.navigateToUrl()</td>
+              <td>26</td>
+              <td class="duration" data-value="2886013215">2.886</td>
+              <td class="duration" data-value="2886013215">3.131</td>
+              <td class="duration" data-value="75036343600">1:15.036</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.verifyErrorEmailAddressAlreadyExistIsVisible()</td>
+              <td>1</td>
+              <td class="duration" data-value="17578600">0.017</td>
+              <td class="duration" data-value="17578600">0.017</td>
+              <td class="duration" data-value="17578600">0.017</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.verifyErrorYourEmailOrPasswordIsIncorrectIsVisible()</td>
+              <td>1</td>
+              <td class="duration" data-value="13671800">0.013</td>
+              <td class="duration" data-value="13671800">0.013</td>
+              <td class="duration" data-value="13671800">0.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.verifyLoginToYourAccountIsVisible()</td>
+              <td>3</td>
+              <td class="duration" data-value="15950700">0.015</td>
+              <td class="duration" data-value="15950700">0.019</td>
+              <td class="duration" data-value="47852100">0.047</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.verifyNewUserSignupIsVisible()</td>
+              <td>2</td>
+              <td class="duration" data-value="14160450">0.014</td>
+              <td class="duration" data-value="14160450">0.014</td>
+              <td class="duration" data-value="28320900">0.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.verifyThatENTERACCOUNTINFORMATIONIsVisible()</td>
+              <td>1</td>
+              <td class="duration" data-value="15625200">0.015</td>
+              <td class="duration" data-value="15625200">0.015</td>
+              <td class="duration" data-value="15625200">0.015</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.verifyThatHomePageIsVisibleSuccessfully()</td>
+              <td>21</td>
+              <td class="duration" data-value="2278771">0.002</td>
+              <td class="duration" data-value="2278771">0.003</td>
+              <td class="duration" data-value="47854200">0.047</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.SignupLoginStepDefinitions.verifyThatUserIsNavigatedToLoginPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="15625200">0.015</td>
+              <td class="duration" data-value="15625200">0.015</td>
+              <td class="duration" data-value="15625200">0.015</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.TestCasesStepDefinitions.clickOnTestCasesButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="353525200">0.353</td>
+              <td class="duration" data-value="353525200">0.353</td>
+              <td class="duration" data-value="353525200">0.353</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.TestCasesStepDefinitions.verifyUserIsNavigatedToTestCasesPageSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="14649200">0.014</td>
+              <td class="duration" data-value="14649200">0.014</td>
+              <td class="duration" data-value="14649200">0.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>117</td>
+            <td>329</td>
+            <td class="duration">1.069</td>
+            <td class="duration">1:15.036</td>
+            <td class="duration">5:51.758</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

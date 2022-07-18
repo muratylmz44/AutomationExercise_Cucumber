@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="26" time="352.118">
+<testcase classname="US101 Test Case 1: Register User" name="TC01 Test Case 1: Register User" time="13.486">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Click on Signup Login button...........................................passed
+And Verify New User Signup! is visible......................................passed
+When Enter name and email address...........................................passed
+Then Click Signup button....................................................passed
+Then Verify that ENTER ACCOUNT INFORMATION is visible.......................passed
+Then Fill details: Title, Name, Email, Password, Date of birth..............passed
+Then Select checkbox Sign up for our newsletter!............................passed
+Then Select checkbox Receive special offers from our partners!..............passed
+Then Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number.passed
+Then Click Create Account button............................................passed
+Then Verify that ACCOUNT CREATED! is visible................................passed
+When Click Continue button..................................................passed
+Then Verify that Logged in as username is visible...........................passed
+Then Click Delete Account button............................................passed
+Then Verify that ACCOUNT DELETED! is visible and click Continue buttons.....passed
+]]></system-out>
+</testcase>
+<testcase classname="US102 Test Case 2:Login User with correct email and password" name="TC02 Test Case 2:Login User with correct email and password" time="9.599">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Click on Signup Login button...........................................passed
+Then Verify Login to your account is visible................................passed
+Then Enter correct email address and password...............................passed
+Then Click login button.....................................................passed
+Then Verify that Logged in as username is visible...........................passed
+Then Click Delete Account button............................................passed
+Then Verify that ACCOUNT DELETED! is visible................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US103 Test Case 3: Login User with incorrect email and password" name="TC03 Test Case 3: Login User with incorrect email and password" time="7.189">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Click on Signup Login button...........................................passed
+Then Verify Login to your account is visible................................passed
+Then Enter incorrect email address and password.............................passed
+Then Click login button.....................................................passed
+Then Verify error Your email or password is incorrect! is visible...........passed
+]]></system-out>
+</testcase>
+<testcase classname="US104 Test Case 4: Logout User" name="TC04 Test Case 4: Logout User" time="9.659">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Click on Signup Login button...........................................passed
+Then Verify Login to your account is visible................................passed
+Then Enter correct email address and password...............................passed
+Then Click login button.....................................................passed
+Then Verify that Logged in as username is visible...........................passed
+Then Click Logout button....................................................passed
+Then Verify that user is navigated to login page............................passed
+]]></system-out>
+</testcase>
+<testcase classname="US105 Test Case 5: Register User with existing email" name="TC05 Test Case 5:  Register User with existing email" time="7.073">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Click on Signup Login button...........................................passed
+And Verify New User Signup! is visible......................................passed
+Then Enter name and already registered email address........................passed
+Then Click Signup button....................................................passed
+Then Verify error Email Address already exist! is visible...................passed
+]]></system-out>
+</testcase>
+<testcase classname="US106 Test Case 6: Contact Us Form" name="TC06 Test Case 6:  Contact Us Form" time="12.432">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Click on Contact Us button.............................................passed
+Then Verify GET IN TOUCH is visible.........................................passed
+Then Enter name, email, subject and message.................................passed
+Then Upload file............................................................passed
+Then Click Submit button....................................................passed
+Then Click OK button........................................................passed
+Then Verify success message Success! Your details have been submitted successfully. is visible.passed
+Then Click Home button and verify that landed to home page successfully.....passed
+]]></system-out>
+</testcase>
+<testcase classname="US107 Test Case 7: Verify Test Cases Page" name="TC07 Test Case 7: Verify Test Cases Page" time="4.928">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Click on Test Cases button.............................................passed
+Then Verify user is navigated to test cases page successfully...............passed
+]]></system-out>
+</testcase>
+<testcase classname="US108 Test Case 8: Verify All Products and product detail page" name="TC08 Test Case 8: Verify All Products and product detail page" time="12.781">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Click on Products button...............................................passed
+Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
+Then The products list is visible...........................................passed
+Then Click on View Product of first product.................................passed
+Then User is landed to product detail page..................................passed
+Then Verify that detail detail is visible: product name, category, price, availability, condition, brand.passed
+]]></system-out>
+</testcase>
+<testcase classname="US109 Test Case 9: Search Product" name="TC09 Test Case 9: Search Product" time="10.442">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Click on Products button...............................................passed
+Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
+Then Enter product name in search input and click search button.............passed
+Then Verify SEARCHED PRODUCTS is visible....................................passed
+Then Verify all the products related to search are visible..................passed
+]]></system-out>
+</testcase>
+<testcase classname="US110 Test Case 10: Verify Subscription in home page" name="TC10 Test Case 10: Verify Subscription in home page" time="8.075">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Scroll down to footer..................................................passed
+Then Verify text SUBSCRIPTION...............................................passed
+Then Enter email address in input and click arrow button....................passed
+Then Verify success message You have been successfully subscribed! is visible.passed
+]]></system-out>
+</testcase>
+<testcase classname="US111 Test Case 11: Verify Subscription in Cart page" name="TC11 Test Case 11: Verify Subscription in Cart page" time="8.259">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Click Cart button......................................................passed
+Then Scroll down to footer..................................................passed
+Then Verify text SUBSCRIPTION...............................................passed
+Then Enter email address in input and click arrow button....................passed
+Then Verify success message You have been successfully subscribed! is visible.passed
+]]></system-out>
+</testcase>
+<testcase classname="US112 Test Case 12:  Add Products in Cart" name="TC12 Test Case 12:  Add Products in Cart" time="9.636">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Click on Products button...............................................passed
+Then Hover over first product and click Add to cart.........................passed
+Then Click Continue Shopping button.........................................passed
+Then Hover over second product and click Add to cart........................passed
+Then Click View Cart button.................................................passed
+Then Verify both products are added to Cart.................................passed
+Then Verify their prices, quantity and total price..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="US113 Test Case 13:  Verify Product quantity in Cart" name="TC13 Test Case 13:  Verify Product quantity in Cart" time="12.109">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Click View Product for any product on home page........................passed
+Then Verify product detail is opened........................................passed
+Then Increase quantity to 4.................................................passed
+Then Click Add to cart button...............................................passed
+Then Click View Cart button.................................................passed
+Then Verify that product is displayed in cart page with exact quantity......passed
+]]></system-out>
+</testcase>
+<testcase classname="US114 Test Case 14:  Place Order: Register while Checkout" name="TC14 Test Case 14: Place Order: Register while Checkout" time="27.122">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Add products to cart...................................................passed
+Then Verify that cart page is displayed.....................................passed
+Then Click Proceed To Checkout..............................................passed
+Then Click Register Login button............................................passed
+Then Fill all details in Signup and create account..........................passed
+Then Verify ACCOUNT CREATED! and click Continue button......................passed
+Then Verify Logged in as username at top....................................passed
+Then Click Cart button......................................................passed
+Then Click Proceed To Checkout button.......................................passed
+Then Verify Address Details and Review Your Order...........................passed
+Then Enter description in comment text area and click Place Order...........passed
+Then Enter payment details: Name on Card, Card Number, CVC, Expiration date.passed
+Then Click Pay and Confirm Order button.....................................passed
+Then Verify success message Your order has been placed successfully!........passed
+Then Click Delete Account button............................................passed
+Then Verify ACCOUNT DELETED! and click Continue button......................passed
+]]></system-out>
+</testcase>
+<testcase classname="US115 Test Case 15:  Place Order: Register before Checkout" name="TC15 Test Case 15: Place Order: Register before Checkout" time="28.607">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Click on Signup Login button...........................................passed
+Then Fill all details in Signup and create account..........................passed
+Then Verify ACCOUNT CREATED! and click Continue button......................passed
+Then Verify Logged in as username at top....................................passed
+Then Add products to cart...................................................passed
+Then Click Cart button......................................................passed
+Then Verify that cart page is displayed.....................................passed
+Then Click Proceed To Checkout..............................................passed
+Then Verify Address Details and Review Your Order...........................passed
+Then Enter description in comment text area and click Place Order...........passed
+Then Enter payment details: Name on Card, Card Number, CVC, Expiration date.passed
+Then Click Pay and Confirm Order button.....................................passed
+Then Verify success message Your order has been placed successfully!........passed
+Then Click Delete Account button............................................passed
+Then Verify ACCOUNT DELETED! and click Continue button......................passed
+]]></system-out>
+</testcase>
+<testcase classname="US116 Test Case 16:  Place Order: Login before Checkout" name="TC16 Test Case 16: Place Order: Login before Checkout" time="25.712">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Click on Signup Login button...........................................passed
+Then Fill email, password and click Login button............................passed
+Then Verify Logged in as username at top....................................passed
+Then Add products to cart...................................................passed
+Then Click Cart button......................................................passed
+Then Verify that cart page is displayed.....................................passed
+Then Click Proceed To Checkout..............................................passed
+Then Verify Address Details and Review Your Order...........................passed
+Then Enter description in comment text area and click Place Order...........passed
+Then Enter payment details: Name on Card, Card Number, CVC, Expiration date.passed
+Then Click Pay and Confirm Order button.....................................passed
+Then Verify success message Your order has been placed successfully!........passed
+Then Click Delete Account button............................................passed
+Then Verify ACCOUNT DELETED! and click Continue button......................passed
+]]></system-out>
+</testcase>
+<testcase classname="US117 Test Case 17:  Remove Products From Cart" name="TC17 Test Case 17: Remove Products From Cart" time="15.14">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Add products to cart...................................................passed
+Then Click Cart button......................................................passed
+Then Verify that cart page is displayed.....................................passed
+Then Click X button corresponding to particular product.....................passed
+Then Verify that product is removed from the cart...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="US118 Test Case 18:   View Category Products" name="TC18 Test Case 18:  View Category Products" time="9.254">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that categories are visible on left side bar....................passed
+Then Click on Women category................................................passed
+Then Click on any category link under Women category, for example Dress.....passed
+Then Verify that category page is displayed and confirm text WOMEN  TOPS PRODUCTS.passed
+Then On left side bar, click on any sub-category link of Men category.......passed
+Then Verify that user is navigated to that category page....................passed
+]]></system-out>
+</testcase>
+<testcase classname="US119 Test Case 19:   View &amp; Cart Brand Products" name="TC19 Test Case 19:  View &amp; Cart Brand Products" time="9.864">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Click on Products button...............................................passed
+Then Verify that Brands are visible on left side bar........................passed
+Then Click on any brand name................................................passed
+Then Verify that user is navigated to brand page and brand products are displayed.passed
+Then On left side bar, click on any other brand link........................passed
+Then Verify that user is navigated to that brand page and can see products..passed
+]]></system-out>
+</testcase>
+<testcase classname="US120 Test Case 20:   Search Products and Verify Cart After Login" name="TC20 Test Case 20:  Search Products and Verify Cart After Login" time="21.564">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Click on Products button...............................................passed
+Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
+Then Enter product name in search input and click search button.............passed
+Then Verify SEARCHED PRODUCTS is visible....................................passed
+Then Verify all the products related to search are visible..................passed
+Then Add those products to cart.............................................passed
+Then Click Cart button and verify that products are visible in cart.........passed
+Then Click Signup  Login button and submit login details....................passed
+Then Again, go to Cart page.................................................passed
+Then Verify that those products are visible in cart after login as well.....passed
+]]></system-out>
+</testcase>
+<testcase classname="US121 Test Case 21:    Add review on product" name="TC21 Test Case 21:   Add review on product" time="10.502">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Click on Products button...............................................passed
+Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
+Then Click on View Product button...........................................passed
+Then Verify Write Your Review is visible....................................passed
+Then Enter name, email and review...........................................passed
+Then Click Submit button....................................................passed
+Then Verify success message Thank you for your review.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="US122 Test Case 22:     Add to cart from Recommended items" name="TC22 Test Case 22:    Add to cart from Recommended items" time="12.136">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Scroll to bottom of page...............................................passed
+Then Verify RECOMMENDED ITEMS are visible...................................passed
+Then Click on Add To Cart on Recommended product............................passed
+Then Click on View Cart button..............................................passed
+Then Verify that product is displayed in cart page..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="US123 Test Case 23:      Verify address details in checkout page" name="TC23 Test Case 23:     Verify address details in checkout page" time="19.873">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Click on Signup Login button...........................................passed
+Then Fill email, password and click Login button............................passed
+Then Verify Logged in as username at top....................................passed
+Then Add products to cart...................................................passed
+Then Click Cart button......................................................passed
+Then Verify that cart page is displayed.....................................passed
+Then Click Proceed To Checkout..............................................passed
+Then Verify that the delivery address is same address filled at the time registration of account.passed
+Then Verify that the billing address is same address filled at the time registration of account.passed
+Then Click Delete Account button............................................passed
+Then Verify ACCOUNT DELETED! and click Continue button......................passed
+]]></system-out>
+</testcase>
+<testcase classname="US124 Test Case 24:     Download Invoice after purchase order" name="TC24 Test Case 24:    Download Invoice after purchase order" time="34.185">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Add products to cart...................................................passed
+Then Click Cart button......................................................passed
+Then Verify that cart page is displayed.....................................passed
+Then Click Proceed To Checkout..............................................passed
+Then Click Register Login button............................................passed
+Then Fill all details in Signup and create account..........................passed
+Then Verify ACCOUNT CREATED! and click Continue button......................passed
+Then Verify Logged in as username at top....................................passed
+Then Click Cart button......................................................passed
+Then Click Proceed To Checkout button.......................................passed
+Then Verify Address Details and Review Your Order...........................passed
+Then Enter description in comment text area and click Place Order...........passed
+Then Enter payment details: Name on Card, Card Number, CVC, Expiration date.passed
+Then Click Pay and Confirm Order button.....................................passed
+Then Verify success message Your order has been placed successfully!........passed
+Then Click Download Invoice button and verify invoice is downloaded successfully..passed
+Then Click Continue button..................................................passed
+Then Click Delete Account button............................................passed
+Then Verify ACCOUNT DELETED! and click Continue button......................passed
+]]></system-out>
+</testcase>
+<testcase classname="US125 Test Case 25:     Verify Scroll Up using 'Arrow' button and Scroll Down functionality" name="TC25 Test Case 25:    Verify Scroll Up using 'Arrow' button and Scroll Down functionality" time="5.046">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Scroll down page to bottom.............................................passed
+Then Verify SUBSCRIPTION is visible.........................................passed
+Then Click on arrow at bottom right side to move upward.....................passed
+Then Verify that page is scrolled up and Full-Fledged practice website for Automation Engineers text is visible on screen.passed
+]]></system-out>
+</testcase>
+<testcase classname="US126 Test Case 26:    Verify Scroll Up without 'Arrow' button and Scroll Down functionality" name="TC26 Test Case 26:    Verify Scroll Up without 'Arrow' button and Scroll Down functionality" time="7.117">
+<system-out><![CDATA[When Launch browser.........................................................passed
+Then Navigate to url........................................................passed
+Then Verify that home page is visible successfully..........................passed
+Then Scroll down page to bottom.............................................passed
+Then Verify SUBSCRIPTION is visible.........................................passed
+Then Scroll up page to top..................................................passed
+Then Verify that page is scrolled up and Full-Fledged practice website for Automation Engineers text is visible on screen.passed
+]]></system-out>
+</testcase>
+</testsuite>
